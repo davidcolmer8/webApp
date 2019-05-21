@@ -12,6 +12,16 @@ def create_app(config=None, testing=False, cli=True):
     @app.route('/index')
     def index():
         user = {'username':'David'}
-        return render_template('index.html', title='Home Page', user=user)
+        posts = [
+        {
+            'author': {'username': 'John'},
+            'body': 'Beautiful day in Portland!'
+        },
+        {
+            'author': {'username': 'Susan'},
+            'body': 'The Avengers movie was so cool!'
+        }
+    ]
+        return render_template('index.html', title='Home Page', user=user, posts=posts)
 
     return app
