@@ -2,7 +2,11 @@
 
 {% block content %}
     <h1>Hello, {{user.username}}!</h1>
+<<<<<<< HEAD
+    {% for post in posts %}
+=======
     {%for post in posts%}
+>>>>>>> 566c73cf4f64466a1ba4065d981599559aa753b9
     <div>
     <p>{{post.author.username}} says: <b>{{post.body}}</b></p>
     </div>
